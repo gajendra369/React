@@ -7,7 +7,6 @@ export default function TextForm(props) {
     }
 
     const change=(event)=>{
-        console.log("done")
         setText(event.target.value)
     }
     const [text,setText]=useState("")
@@ -21,7 +20,7 @@ export default function TextForm(props) {
         </div>
         <div style={{color:props.mode==='light'?'black':'white'}}>
             <h2>Your text summary</h2>
-            <p>No. of word {text.split(" ").length }, No. of characters {text.length}</p>
+            <p>No. of word {text.length===0?"0":text.split(" ").length }, No. of characters {text.length}</p>
         </div>
         </>
   )
